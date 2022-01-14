@@ -1,0 +1,10 @@
+$(document).ready(function(){
+    $("gallery.description").click(function(){
+        $("#crusts").show();
+    });
+    $("#medium").click(function(){
+        $("#crusts").show();
+    });$("#large").click(function(){
+        $("#crusts").show();
+    });
+});
