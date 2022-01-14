@@ -31,5 +31,10 @@
 }
 
 #crusts{
-    visibility: hidden;
+    ;
+}
+
+html,body{
+    background-color: rgb(5, 5, 5);
+    color: blanchedalmond;
 }
