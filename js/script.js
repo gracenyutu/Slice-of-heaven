@@ -1,10 +1,11 @@
 $(document).ready(function(){
-    $("gallery.description").click(function(){
-        $("#crusts").show();
+    $("gallery.small").click(function(){
+        $("gallery.description").css("background-color", "red");
     });
     $("#medium").click(function(){
         $("#crusts").show();
     });$("#large").click(function(){
-        $("#crusts").show();
+        $url("crusts.html").show();
     });
+
 });

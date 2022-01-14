@@ -12,6 +12,8 @@
 .description {
     text-align: center;
     padding: 15px;
+    position: relative;
+
 }
 
 .description:hover {
@@ -33,4 +35,10 @@
 html,body{
     background-color: rgb(5, 5, 5);
     color: blanchedalmond;
+    
+}
+
+h1,h2,h3,h4,h5,h6{
+   padding: 20px;
+   background-color: grey;
 }
