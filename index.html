@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/script.js"></script>
     <title>Pizza Palace</title>
 </head>
 <body>
@@ -78,11 +79,11 @@
         </div>
     </div>
     <h4>ORDER HERE</h4>
-    <div class="row">
+    <div class="row order">
       <div class="col-sm-5">
         <form action="">
           <label for="select">What flavour would you like?</label>
-            <select name="pizza-flavours" id="pFlavours" class="custom-select custom-select-md mb-3">
+            <select name="pizza-flavours" id="flavour" class="custom-select custom-select-md mb-3">
               <option value="">Hawaiian pizza</option>
               <option value="">Margherita pizza</option>
               <option value="">Pepperoni pizza</option>
@@ -91,7 +92,7 @@
               <option value="">Double cheese pizza</option>
             </select>
           <label for="select">Select size</label>
-            <select name="" id="" class="custom-select custom-select-md mb-3">
+            <select name="" id="size" class="custom-select custom-select-md mb-3">
               <option selected value="0">Select size here</option>
               <option value="small">Small -- Ksh.500</option>
               <option value="medium">Medium -- Ksh.600</option>
@@ -99,7 +100,7 @@
               <option value="xlarge">Extra Large -- Ksh.800</option>
             </select>
           <label for="crust">Choose your preferred crust</label>
-            <select name="" id="" class="custom-select custom-select-md mb-3">
+            <select name="" id="crust" class="custom-select custom-select-md mb-3">
               <option selected value="0">Choose your preferred crust</option>
               <option value="crispy">crispy Crust</option>
               <option value="stuffed">Stuffed Crust</option>
@@ -107,31 +108,60 @@
             </select>
           <label for="Toppings">Choose your toppings</label><br>
             <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" class="form-check-input" id="cheddar" value="200">
+              <input type="checkbox" class="form-check-input" id="cheddar" value="cheddar" name="toppings">
               <label for="cheddar">Cheddar Toppings</label>
             </div>
             <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" class="form-check-input" id="mushroom" value="200">
+              <input type="checkbox" class="form-check-input" id="mushroom" value="mushroom" name="toppings">
               <label for="mushroom">Mushroom Toppings</label>
             </div>
             <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" class="form-check-input" id="pineapple" value="200">
+              <input type="checkbox" class="form-check-input" id="pineapple" value="pineapple" name="toppings">
               <label for="pineapple">Pineapple Toppings</label>
             </div>
             <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" class="form-check-input" id="veggies" value="200">
+              <input type="checkbox" class="form-check-input" id="veggies" value="veggies" name="toppings">
               <label for="veggies">Vegetable Toppings</label>
             </div>
             <div class="custom-control custom-checkbox custom-control-inline">
-              <input type="checkbox" class="form-check-input" id="rainbow" value="200">
+              <input type="checkbox" class="form-check-input" id="rainbow" value="rainbow" name="toppings">
               <label for="rainbow">Rainbow Toppings</label>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" class="btn btn-success">Submit</button>
         </form>
-      
-      </div>
+        </div>
+        <div class="col-sm-7 selection">
+          <h2>Your Order is:</h2>
+          <div id="orders">
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <th scope="col">Flavour</th>
+                  <th scope="col">Size</th>
+                  <th scope="col">Crust</th>
+                  <th scope="col">Topping</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody id="ordersmade">
+                <tr>
+                  <td id="pizzaFlavour"></td>
+                  <td id="pizzaSize"></td>
+                  <td id="pizzaCrust"></td>
+                  <td id="pizzaTopping"></td>
+                  <td id="totals"></td>
+                </tr>                  
+              </tbody>
+            </table>
+            <p id="pizzatotal"></p>
+            <p id="totalbill"></p> 
+            <p id="addedprice">Delivery will cost sh. 200</p>
+            <p id="finallmessage"></p>
+          </div>
+          <button class="btn btn-primary" id="addPizza">Add Pizza</button>
+          <button class="btn btn-primary" id="checkout">Checkout</button>
+          <button class="btn btn-primary">Home Delivery</button>
     </div>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+   
 </body>
 </html>
