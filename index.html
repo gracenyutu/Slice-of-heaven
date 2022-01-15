@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    
     <title>Pizza Palace</title>
 </head>
 <body>
@@ -29,18 +30,18 @@
           </ul>
         </div>
       </nav>
-    <div class=""> 
-        <img src="images/pizza bg.jpeg" class="img-fluid" alt="">
-    </div>
+    
 
-    <div class=>
-     <h4 class="text">Choose the size </h4>
+    <div class="">
+        <h4 class="text">Choose the size </h4>
         <div class="gallery">
-          <img src="images/pine pizza.jpg" alt="small pizza" width="266" height="260" class="small">
-          <div class="description">Small</div>
+          <a href="crusts.html">
+            <img src="images/pine pizza.jpg" alt="small pizza" width="266" height="260" class="small">
+            <div class="description">Small</div>
+          </a>
         </div>
         <div class="gallery">
-          <img src="images/veg pizza.jpg" alt="medium pizza" width="266" height="260" id="medium">
+          <img src="images/veg pizza.jpg" alt="medium pizza" width="266" height="260" id="medium" >
           <div class="description">Medium</div>
         </div>
         <div class="gallery">
@@ -52,7 +53,85 @@
             <div class="description">Extra Large</div>
           </div>     
     </div>
-    <script src="js/script.js"></script>
+    <div class  class="crustTypes">
+        <h4>Which crust would you like?</h4>
+        <div id="crusts">
+            <button type="radio" id="crispyCrust" value="150">
+              <label for="crispyCrust">
+                <img src="images/crusts/crispy-crust.jpg" alt="" width="300" height="300">
+              </label> CRISPY CRUST
+            </button>
+        </div>
+        <div>
+            <button type="radio" id="stuffedCrust" value="250">
+              <label for="stuffedCrust">
+                <img src="images/crusts/stuffed-crust.jpeg" alt="" width="300" height="300">
+              </label>STUFFED CRUST
+            </button>
+        </div>
+        <div>
+          <button type="radio" id=gFreeCrust value="200">
+            <label for="gFreeCrust">
+              <img src="images/crusts/Gluten-Free-Pizza.jpg" alt="" width="300" height="300">
+            </label>GLUTEN FREE CRUST
+          </button>
+        </div>
+    </div>
+    <h4>ORDER HERE</h4>
+    <div class="row">
+      <div class="col-sm-5">
+        <form action="">
+          <label for="select">What flavour would you like?</label>
+            <select name="pizza-flavours" id="pFlavours" class="custom-select custom-select-md mb-3">
+              <option value="">Hawaiian pizza</option>
+              <option value="">Margherita pizza</option>
+              <option value="">Pepperoni pizza</option>
+              <option value="">Veggie pizza</option>
+              <option value="">BBQ Chicken pizza</option>
+              <option value="">Double cheese pizza</option>
+            </select>
+          <label for="select">Select size</label>
+            <select name="" id="" class="custom-select custom-select-md mb-3">
+              <option selected value="0">Select size here</option>
+              <option value="small">Small -- Ksh.500</option>
+              <option value="medium">Medium -- Ksh.600</option>
+              <option value="large">Large -- Ksh.700</option>
+              <option value="xlarge">Extra Large -- Ksh.800</option>
+            </select>
+          <label for="crust">Choose your preferred crust</label>
+            <select name="" id="" class="custom-select custom-select-md mb-3">
+              <option selected value="0">Choose your preferred crust</option>
+              <option value="crispy">crispy Crust</option>
+              <option value="stuffed">Stuffed Crust</option>
+              <option value="gFree">Gluten Free Crust</option>
+            </select>
+          <label for="Toppings">Choose your toppings</label><br>
+            <div class="custom-control custom-checkbox custom-control-inline">
+              <input type="checkbox" class="form-check-input" id="cheddar" value="200">
+              <label for="cheddar">Cheddar Toppings</label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+              <input type="checkbox" class="form-check-input" id="mushroom" value="200">
+              <label for="mushroom">Mushroom Toppings</label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+              <input type="checkbox" class="form-check-input" id="pineapple" value="200">
+              <label for="pineapple">Pineapple Toppings</label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+              <input type="checkbox" class="form-check-input" id="veggies" value="200">
+              <label for="veggies">Vegetable Toppings</label>
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+              <input type="checkbox" class="form-check-input" id="rainbow" value="200">
+              <label for="rainbow">Rainbow Toppings</label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+      
+      </div>
+    </div>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

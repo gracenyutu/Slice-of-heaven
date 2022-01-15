@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/styles.css" rel="stylesheet" type="text/css"
-    <script src="js/script.js"></script>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
     <title>Pizza Palace</title>
 </head>
 <body>
@@ -35,24 +34,24 @@
 
    
     
-    <div class="container-fluid" id="crusts">
+    <div class="container-fluid" >
         <h4>Which crust would you like?</h4>
-        <div >
-            <button type="radio" id="crispyCrust">
+        <div id="crusts">
+            <button type="radio" id="crispyCrust" name="radioName">
               <label for="crispyCrust">
                 <img src="images/crusts/crispy-crust.jpg" alt="" width="300" height="300">
               </label> CRISPY CRUST
             </button>
         </div>
         <div>
-            <button type="radio" id="stuffedCrust">
+            <button type="radio" id="stuffedCrust" name="radioName">
               <label for="stuffedCrust">
                 <img src="images/crusts/stuffed-crust.jpeg" alt="" width="300" height="300">
               </label>STUFFED CRUST
             </button>
         </div>
         <div>
-          <button type="radio" id=gFreeCrust>
+          <button type="radio" id=gFreeCrust name="radioName">
             <label for="gFreeCrust">
               <img src="images/crusts/Gluten-Free-Pizza.jpg" alt="" width="300" height="300">
             </label>GLUTEN FREE CRUST
@@ -62,7 +61,7 @@
     
 
     
-    
+    <script src="js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
