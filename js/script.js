@@ -159,7 +159,7 @@ $(document).ready(function(){
            // constractor function
            var newOrder = new pizza(pflavour, psize, pcrust,ptopping,total);
      
-           $("#ordersmade").append('<tr><td id="pizzaname">'+newOrder.flavour +'</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatopping">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
+           $("#ordersmade").append('<tr><td id="pizzaFlavour">'+newOrder.flavour +'</td><td id="pizzaSize">' + newOrder.size + '</td><td id="pizzaCrust">'+newOrder.crust + '</td><td id="pizzaTopping">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
            console.log(newOrder);
            
            

@@ -89,9 +89,9 @@
           <label for="crust">Choose your preferred crust</label>
             <select name="" id="crust" class="custom-select custom-select-md mb-3">
               <option selected value="0">Choose your preferred crust</option>
-              <option value="crispy">crispy Crust</option>
-              <option value="stuffed">Stuffed Crust</option>
-              <option value="gFree">Gluten Free Crust</option>
+              <option value="crispy">crispy Crust -- Ksh.200</option>
+              <option value="stuffed">Stuffed Crust -- Ksh.250</option>
+              <option value="gFree">Gluten Free Crust -- Ksh.180</option>
             </select>
           <label for="Toppings">Choose your toppings</label><br>
             <div class="custom-control custom-checkbox custom-control-inline">
@@ -113,8 +113,17 @@
             <div class="custom-control custom-checkbox custom-control-inline">
               <input type="checkbox" class="form-check-input" id="rainbow" value="rainbow" name="toppings">
               <label for="rainbow">Rainbow Toppings</label>
+            </div><br>
+            <button type="submit" class="btn btn-success submit">Submit</button><br>
+            <label for="Delivery">Would you need it delivered?</label><br>
+            <div class="">
+              <input type="radio" id="yes" name="delivery" value="yes">
+              <label for="yes">Yes</label><br>
             </div>
-            <button type="submit" class="btn btn-success">Submit</button>
+            <div class="">
+              <input type="radio" id="no" name="delivery" value="no">
+              <label for="no">No</label>
+            </div>
         </form>
         </div>
         <div class="col-sm-7 selection">
