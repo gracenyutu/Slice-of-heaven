@@ -114,16 +114,9 @@
               <input type="checkbox" class="form-check-input" id="rainbow" value="rainbow" name="toppings">
               <label for="rainbow">Rainbow Toppings</label>
             </div><br>
-            <button type="submit" class="btn btn-success submit">Submit</button><br>
-            <!--<label for="delivery">Would you need it delivered?</label><br>
-            <div id="delivery">
-              <input type="radio" id="yes" name="delivery" value="yes">
-              <label for="yes">Yes</label><br>
-            </div>
-            <div class="">
-              <input type="radio" id="no" name="delivery" value="no">
-              <label for="no">No</label>
-            </div>-->
+            <button type="submit" class="btn btn-primary submit">Submit</button><br>
+            <label for="delivery">Click below if you want it delivered</label><br>
+            <button type="submit" class="btn btn-success proceed">Proceed</button>
         </form>
         </div>
         <div class="col-sm-7 selection">
@@ -151,13 +144,23 @@
             </table>
             <p id="pizzatotal"></p>
             <p id="totalbill"></p> 
-            <p id="addedprice">Delivery will cost sh. 200</p>
+            <p id="addedprice">Delivery will cost sh. 100</p>
             <p id="finallmessage"></p>
           </div>
-          <button class="btn btn-primary" id="addPizza">Add Pizza</button>
+          <button class="btn btn-primary addPizza" type="submit" id="addPizza">Add Pizza</button>
           <button class="btn btn-primary" id="checkout">Checkout</button>
           <button class="btn btn-primary">Home Delivery</button>
+          <div class="delivery">
+            <form action="">
+              <div class="form-group">
+                <input type="text" id="name" class="form-control mb-3" placeholder="Name">
+                <input type="number" id="phone" class="form-control mb-3" placeholder="Pnone Number">
+                <input type="text" id="location" class="form-control mb-3" placeholder="Location for delivery">
+                <button class="btn btn-orange" id="final-order">Place Order</button>
+              </div>
+            </form>
+        </div>
     </div>
-   
+  </div>
 </body>
 </html>
