@@ -16,19 +16,20 @@ let rainbow = document.getElementById("rainbow").value; */
 
 var price, crustprice, toppingprice ;
 let total = 0;
-class pizza{
-  constructor(flavour,size,crust,topping,total){
+function Pizza(flavour,size,crust,topping,total){
     this.flavour = flavour;
     this.size = size;
     this.crust = crust;
     this.topping = topping;
-    this.total = total
+    this.total = total;
   }
-}
+
 
 
 $(document).ready(function(){
     $("button.submit").click(function(event){
+        event.preventDefault();
+
         let pflavour = $("#flavour option:selected").val();
         let psize = $("#size option:selected").val();
         let pcrust = $("#crust option:selected").val();
@@ -62,16 +63,16 @@ $(document).ready(function(){
         }
         switch(pcrust){
            case "0":
-             crust_price = 0;
+             crustprice = 0;
            break;
-           case "Crispy":
-             crust_price = 200;
+           case "crispy":
+             crustprice = 200;
            break;
-           case "Stuffed":
-             crust_price = 250;
+           case "stuffed":
+             crustprice = 250;
            break;
-           case "Gluten-free":
-             crust_price = 180;
+           case "gFree":
+             crustprice = 180;
            break;
            default:
              console.log("No price"); 
@@ -90,7 +91,7 @@ $(document).ready(function(){
            $("div.selection").slideDown(1000);
          }
      
-         total = price + crust_price + topping_value;
+         total = price + crustprice + topping_value;
          console.log(total);
          let checkoutTotal =0;
          checkoutTotal = checkoutTotal + total;
@@ -138,20 +139,20 @@ $(document).ready(function(){
                  crust_price = 0;
                break;
                case "Crispy":
-                 crust_price = 200;
+                 crustprice = 200;
                break;
                case "Stuffed":
-                 crust_price = 150;
+                 crustprice = 150;
                break;
                case "Gluten-free":
-                 crust_price = 180;
+                 crustprice = 180;
                break;
                default:
                  console.log("No price"); 
              }
              let topping_value = ptopping.length*100;
              console.log("topping value" + topping_value);
-             total = price + crust_price + topping_value;
+             total = price + crustprice + topping_value;
              console.log(total);
      
              checkoutTotal = checkoutTotal + total;
@@ -183,7 +184,7 @@ $(document).ready(function(){
            $("#addedprice").hide();
            $("button.deliver").hide();
            $("#pizzatotal").hide();
-           let deliveryamount= checkoutTotal+150;
+           let deliveryamount= checkoutTotal+200;
            console.log("You will pay sh. "+deliveryamount+" on delivery");
            $("#totalbill").append("Your bill plus delivery fee is: "+deliceryamount);
          });
