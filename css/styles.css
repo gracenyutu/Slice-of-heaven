@@ -35,11 +35,13 @@ html,body{
     position: relative;
     overflow-x: hidden;
     background-attachment: fixed;
+    font-family: courgette;
 }
 
 h1,h2,h3,h4,h5,h6{
    padding: 20px;
    background-color: grey;
+   font-family: Abril Fatface;
 }
 
 .order{
@@ -47,5 +49,6 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .selection{
-    display: none;
+    padding-left: 2%;
+    padding-right: 2%;
 }

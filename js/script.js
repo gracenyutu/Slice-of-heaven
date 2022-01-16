@@ -16,14 +16,15 @@ let rainbow = document.getElementById("rainbow").value; */
 
 var price, crustprice, toppingprice ;
 let total = 0;
-function pizza(flavour,size,crust,topping,total){
+class pizza{
+  constructor(flavour,size,crust,topping,total){
     this.flavour = flavour;
     this.size = size;
     this.crust = crust;
     this.topping = topping;
     this.total = total
+  }
 }
-
 
 
 $(document).ready(function(){
@@ -100,7 +101,7 @@ $(document).ready(function(){
          $("#pizzaTopping").html(ptopping.join(", "));
          $("#totals").html(total);
          
-     // Add pizza button
+          // Add pizza button
          $("button.addPizza").click(function(){
            let pflavour = $("#flavour option:selected").val();
            let psize = $("#size option:selected").val();
@@ -156,7 +157,7 @@ $(document).ready(function(){
              checkoutTotal = checkoutTotal + total;
              console.log(checkoutTotal);
            // constractor function
-           var newOrder = new Getpizza(pflavour, psize, pcrust,ptopping,total);
+           var newOrder = new pizza(pflavour, psize, pcrust,ptopping,total);
      
            $("#ordersmade").append('<tr><td id="pizzaname">'+newOrder.flavour +'</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatopping">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
            console.log(newOrder);
@@ -182,8 +183,8 @@ $(document).ready(function(){
            $("#addedprice").hide();
            $("button.deliver").hide();
            $("#pizzatotal").hide();
-           let deliceryamount= checkoutTotal+150;
-           console.log("You will pay sh. "+deliceryamount+" on delivery");
+           let deliveryamount= checkoutTotal+150;
+           console.log("You will pay sh. "+deliveryamount+" on delivery");
            $("#totalbill").append("Your bill plus delivery fee is: "+deliceryamount);
          });
      
@@ -212,6 +213,6 @@ $(document).ready(function(){
              $("button#final-order").show();
            }
         });
-        event.preventDefault();
+      event.preventDefault();  
     });
 });
