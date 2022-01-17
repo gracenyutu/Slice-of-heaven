@@ -29,6 +29,7 @@ function Pizza(flavour,size,crust,topping,total){
 $(document).ready(function(){
     $("button.submit").click(function(event){
         event.preventDefault();
+        $("div.delivery").hide();
 
         let pflavour = $("#flavour option:selected").val();
         let psize = $("#size option:selected").val();
@@ -84,10 +85,12 @@ $(document).ready(function(){
            console.log("nothing selected");
            $("button.submit").show();
            $("div.selection").hide();
+           $("p.fee").hide();
            alert("Please select pizza size and crust"); 
          }
          else{
            $("button.submit").hide();
+           $("p.fee").hide();
            $("div.selection").slideDown(1000);
          }
      
@@ -105,17 +108,19 @@ $(document).ready(function(){
          //Proceed button
          $("button.proceed").click(function(event){
           event.preventDefault();
-          alert("Your delivery fee will be Ksh.100")
-          
+          $("button.submit").show();
+          $("div.delivery").toggle();
+          $("p.fee").show();
+
          });
           // Add pizza button
-         $("button.addPizza").click(function(event){
+         $("button.submit").click(function(event){
            event.preventDefault();
 
            let pflavour = $("#flavour option:selected").val();
-        let psize = $("#size option:selected").val();
-        let pcrust = $("#crust option:selected").val();
-        let ptopping = [];
+           let psize = $("#size option:selected").val();
+           let pcrust = $("#crust option:selected").val();
+           let ptopping = [];
         $.each($("input[name='toppings']:checked"), function(){            
             ptopping.push($(this).val());
         });
@@ -161,29 +166,12 @@ $(document).ready(function(){
          }
          let topping_value = ptopping.length*100;
          console.log("topping value" + topping_value);
-     
-         if((psize == "0") && (pcrust == "0")){
-           console.log("nothing selected");
-           $("button.submit").show();
-           $("div.selection").hide();
-           alert("Please select pizza size and crust"); 
-         }
-         else{
-           $("button.submit").hide();
-           $("div.selection").slideDown(1000);
-         }
-     
          total = price + crustprice + topping_value;
          console.log(total);
-         let checkoutTotal =0;
+        
          checkoutTotal = checkoutTotal + total;
      
-         $("#pizzaFlavour").html($("#flavour option:selected").val());
-         $("#pizzaSize").html( $("#size option:selected").val());
-         $("#pizzaCrust").html($("#crust option:selected").val());
-         $("#pizzaTopping").html(ptopping.join(", "));
-         $("#totals").html(total);
-           // constractor function
+                  
            var newOrder = new pizza(pflavour, psize, pcrust,ptopping,total);
      
            $("#ordersmade").append('<tr><td id="pizzaFlavour">'+newOrder.flavour +'</td><td id="pizzaSize">' + newOrder.size + '</td><td id="pizzaCrust">'+newOrder.crust + '</td><td id="pizzaTopping">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
@@ -196,9 +184,9 @@ $(document).ready(function(){
          // Checkout button
          $("button#checkout").click(function(){ 
            $("button#checkout").hide();
-           $("button.addPizza").hide();
+           $("button.submit").hide();
            $("button.deliver").hide();
-           $("#addedprice").hide();
+           $("#addedprice").show();
            console.log("Your total bills is sh. "+checkoutTotal);
            $("#pizzatotal").append("Your bill is sh. "+checkoutTotal);
          });
@@ -230,6 +218,6 @@ $(document).ready(function(){
              $("button#final-order").show();
            }
         });
-      event.preventDefault();  
+       
     });
 });

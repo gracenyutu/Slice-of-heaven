@@ -70,7 +70,7 @@
       <div class="col-sm-5">
         <form action="">
           <label for="select">What flavour would you like?</label>
-            <select name="pizza-flavours" id="flavour" class="custom-select custom-select-md mb-3">
+            <select name="pizza-flavours" id="flavour" class="custom-select custom-select-md mb-3 flavour">
               <option value="Hawaiian pizza">Hawaiian pizza</option>
               <option value="Margherita pizza">Margherita pizza</option>
               <option value="Pepperoni pizza">Pepperoni pizza</option>
@@ -79,7 +79,7 @@
               <option value="Double cheese pizza">Double cheese pizza</option>
             </select>
           <label for="select">Select size</label>
-            <select name="" id="size" class="custom-select custom-select-md mb-3">
+            <select name="" id="size" class="custom-select custom-select-md mb-3 size">
               <option selected value="0">Select size here</option>
               <option value="small">Small -- Ksh.500</option>
               <option value="medium">Medium -- Ksh.600</option>
@@ -87,7 +87,7 @@
               <option value="xlarge">Extra Large -- Ksh.800</option>
             </select>
           <label for="crust">Choose your preferred crust</label>
-            <select name="" id="crust" class="custom-select custom-select-md mb-3">
+            <select name="" id="crust" class="custom-select custom-select-md mb-3 crust">
               <option selected value="0">Choose your preferred crust</option>
               <option value="crispy">crispy Crust -- Ksh.200</option>
               <option value="stuffed">Stuffed Crust -- Ksh.250</option>
@@ -144,10 +144,11 @@
             </table>
             <p id="pizzatotal"></p>
             <p id="totalbill"></p> 
-            <p id="addedprice">Delivery will cost sh. 100</p>
+            <p id="addedprice"></p>
             <p id="finallmessage"></p>
           </div>
-          <button class="btn btn-primary addPizza" type="submit" id="addPizza">Add Pizza</button>
+          <p class="fee">Your delivery fee will be Ksh.100</p>
+          <button class="btn btn-primary submit" type="submit" id="addPizza">Add Pizza</button>
           <button class="btn btn-primary" id="checkout">Checkout</button>
           <div class="delivery">
             <form action="">
